@@ -138,6 +138,39 @@
   margin-left: 30px;
   margin-right: 30px;
 }
+.img-servicos img {
+  width: 150px;
+}
+.img-servicos {
+  text-align: center;
+  margin-top: 25px;
+}
+#img-entrega-rapida {
+  text-align: center;
+  margin-top: 70px;
+}
+#img-entrega-rapida img {
+  width: 220px;
+}
+#img-melhor-qualidade img {
+  width: 100px;
+}
+#img-melhor-qualidade {
+  text-align: center;
+  margin-top: 70px;
+}
+.titulo-descricao {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font-family-sans-serif);
+  margin-top: 10px;
+}
+.texto-descricao {
+  text-align: center;
+  margin: -10px 30px 0px 30px;
+  color: var(--color-text);
+}
 .tipos {
   font-size: 20px;
   font-family: var(--font-family-sans-serif);
