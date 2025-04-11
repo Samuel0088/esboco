@@ -284,14 +284,14 @@
   gap: 10px; 
   margin-top: 5px;
 }
-#sacola-compras img {
+.sacola-compras img {
   width: 20px;
   cursor: pointer;
 }
-#sacola-compras {
+.sacola-compras {
   display: none;
 }
-.produtos:hover #sacola-compras {
+.produtos:hover .sacola-compras {
   display: block;
   padding: 10px;
   background: var(--color-black-heavy);
@@ -312,7 +312,10 @@
   border-radius: 15px;
 }
 #ver-mais:hover {
-  background: var(--color-primary);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transform: scale(1.05); /* OU translateY, etc. */
+  transition: all 0.3s ease;
 }
 .escondido {
   display: none;
@@ -382,4 +385,134 @@ footer p {
 }
 #nome-petshop-footer {
   font-weight: bold;
+}
+/* Animacao */
+.animacao {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.5s ease;
+}
+.animar {
+  animation: slideIn 0.7s ease-out forwards;
+}
+#slogan-petshop.animar {
+  animation-delay: 0s;
+}
+#subtitulo.animar {
+  animation-delay: 0.5s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+    background: transparent;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    background: transparent;
+  }
+}
+.delay-btn {
+  animation-delay: 1s;
+}
+.delay-servicos {
+  animation-delay: 1s;
+}
+.delay-entrega-rapida {
+  animation-delay: 1s;
+}
+.delay-melhor-qualidade {
+  animation-delay: 1s;
+}
+.delay-opcoes {
+  animation-delay: 1s;
+}
+.delay-reserva {
+  animation-delay: 1s;
+}
+/* btn compras */
+#btn-compra {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background-color: #f29e38; 
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  animation: surgir 0.5s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn-compra img {
+  width: 25px;
+  height: 25px;
+  background: var(--color-primary);
+  text-align: center;
+}
+
+#contador-carrinho {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: var(--color-secondary);
+  color: var(--color-black-heavy);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+/* modal */
+.modal-carrinho {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-conteudo {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  max-height: 80vh; /* limita a altura total do conteúdo */
+  overflow-y: auto; /* ativa rolagem quando ultrapassar a altura */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.fechar {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#itens-carrinho img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.item-linha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.modal-conteudo a {
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 10px;
+  background: var(--color-primary);
+  border-radius: 10px;
 }
