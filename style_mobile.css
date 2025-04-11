@@ -466,7 +466,7 @@ footer p {
   border-radius: 50%;
   font-weight: bold;
 }
-/* modal */
+/* modal (pag de compas) */
 .modal-carrinho {
   display: none;
   position: fixed;
@@ -485,8 +485,8 @@ footer p {
   width: 90%;
   max-width: 400px;
   position: relative;
-  max-height: 80vh; /* limita a altura total do conteúdo */
-  overflow-y: auto; /* ativa rolagem quando ultrapassar a altura */
+  max-height: 80vh; 
+  overflow-y: auto;
   background: white;
   padding: 20px;
   border-radius: 10px;
